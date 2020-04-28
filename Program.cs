@@ -43,7 +43,7 @@ namespace DotNetVersions
             if (!string.IsNullOrEmpty(spLevel))
                 spLevelString = " Service Pack " + spLevel;
 
-            Console.WriteLine($"{version}{spLevelString}");
+            Console.WriteLine("${version}{spLevelString}");
         }
         private static void Get1To45VersionFromRegistry()
         {
