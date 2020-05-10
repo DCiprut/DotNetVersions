@@ -44,6 +44,7 @@ namespace DotNetVersions
                 spLevelString = " Service Pack " + spLevel;
 
             Console.WriteLine("${version}{spLevelString}");
+            Console.WriteLine($"{version}{spLevelString}");
         }
         private static void Get1To45VersionFromRegistry()
         {
@@ -132,10 +133,10 @@ namespace DotNetVersions
                         );
                     }
                 }
-            }
-
+			}
+		}	
             // Checking the version using >= enables forward compatibility.
-            string CheckFor45PlusVersion(int releaseKey)
+        private static  string CheckFor45PlusVersion(int releaseKey)
             {
                 if (releaseKey >= 528040)
                     return "4.8";
@@ -161,6 +162,5 @@ namespace DotNetVersions
                 // that 4.5 or later is installed.
                 return "";
             }
-        }
-    }
+		}
 }
